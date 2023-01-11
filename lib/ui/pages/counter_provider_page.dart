@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_web/providers/counter_provider.dart';
-import 'package:flutter_web/ui/shared/custom_app_menu.dart';
-import 'package:flutter_web/ui/shared/custom_flat_button.dart';
+import 'package:bases_web/providers/counter_provider.dart';
+import 'package:bases_web/ui/shared/custom_app_menu.dart';
+import 'package:bases_web/ui/shared/custom_flat_button.dart';
 
 
 class CounterProviderPage extends StatelessWidget {
@@ -11,7 +11,7 @@ class CounterProviderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: ( _ ) => CounterProvider(),
+      create: ( _ ) => CounterProvider( '5' ),
       child: _CounterProviderPageBody()
     );
   }
